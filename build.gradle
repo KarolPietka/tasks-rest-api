@@ -19,4 +19,5 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	compileOnly ('org.projectlombok:lombok:1.18.8')
 	annotationProcessor ('org.projectlombok:lombok:1.18.8')
+	compile ('mysql:mysql-connector-java')
 }
