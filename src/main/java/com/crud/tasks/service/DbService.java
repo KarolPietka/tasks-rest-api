@@ -1,6 +1,17 @@
 package com.crud.tasks.service;
 
-public class DbService {
+import com.crud.tasks.domain.Task;
+import com.crud.tasks.repository.TaskRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
+public class DbService {
+    @Autowired
+    private TaskRepository repository;
+
+    public List<Task> getAllTasks(){
+        return repository.findAll();
+    }
 
 }
