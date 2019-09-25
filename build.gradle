@@ -3,12 +3,18 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 	id 'eclipse'
+	id 'idea'
+	id 'war'
 }
 
 group = 'com.crud'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
-
+/* Można ustalić nazwę
+war{
+	archiveName 'crud.war'
+}
+*/
 repositories {
 	mavenCentral()
 	maven { url 'https://repo.spring.io/milestone' }
@@ -22,4 +28,6 @@ dependencies {
 	compile('mysql:mysql-connector-java')
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	
+	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
